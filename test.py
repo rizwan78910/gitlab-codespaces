@@ -23,6 +23,7 @@ for key, value in capabilities.items():
     chrome_options.set_capability(key, value)
 
 driver = webdriver.Remote(command_executor=hub_url, options=chrome_options)
+
 driver.get("https://example.com")
 print("Title:", driver.title)
 driver.quit()
