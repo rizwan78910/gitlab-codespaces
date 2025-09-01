@@ -21,7 +21,9 @@ chrome_options = Options()
 for key, value in capabilities.items():
     chrome_options.set_capability(key, value)
 
+# Selenium 4 uses 'options' instead of 'desired_capabilities'
 driver = webdriver.Remote(command_executor=hub_url, options=chrome_options)
+
 driver.get("https://example.com")
 print("Title:", driver.title)
 driver.quit()
